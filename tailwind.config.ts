@@ -7,8 +7,12 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1400px",
       },
     },
@@ -57,33 +61,60 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Government Portal Colors
+        gov: {
+          blue: {
+            dark: "hsl(var(--gov-blue-dark))",
+            DEFAULT: "hsl(var(--gov-blue))",
+            light: "hsl(var(--gov-blue-light))",
+          },
+          saffron: {
+            DEFAULT: "hsl(var(--gov-saffron))",
+            dark: "hsl(var(--gov-saffron-dark))",
+          },
+          green: {
+            DEFAULT: "hsl(var(--gov-green))",
+            light: "hsl(var(--gov-green-light))",
+          },
+          gray: {
+            light: "hsl(var(--gov-gray-light))",
+            DEFAULT: "hsl(var(--gov-gray))",
+            dark: "hsl(var(--gov-gray-dark))",
+          },
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: ['Noto Sans', 'Noto Sans Gujarati', 'system-ui', 'sans-serif'],
+        gujarati: ['Noto Sans Gujarati', 'Noto Sans', 'system-ui', 'sans-serif'],
+      },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        ticker: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        fadeIn: {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        ticker: "ticker 30s linear infinite",
+        "fade-in": "fadeIn 0.5s ease-out forwards",
       },
     },
   },
