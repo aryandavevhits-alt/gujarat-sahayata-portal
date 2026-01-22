@@ -1,13 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import Layout from '@/components/layout/Layout';
+import HeroSection from '@/components/home/HeroSection';
+import NewsTicker from '@/components/home/NewsTicker';
+import CommissionerDesk from '@/components/home/CommissionerDesk';
+import ServiceRepository from '@/components/home/ServiceRepository';
+import IndustrySectors from '@/components/home/IndustrySectors';
+import NewsNotifications from '@/components/home/NewsNotifications';
+import KYDSection from '@/components/home/KYDSection';
+import MediaSection from '@/components/home/MediaSection';
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Layout showBreadcrumb={false}>
+      {/* Hero Section with Quick Actions */}
+      <HeroSection />
+
+      {/* News Ticker */}
+      <NewsTicker />
+
+      {/* Commissioner's Desk */}
+      <CommissionerDesk />
+
+      {/* Governance & Service Repository */}
+      <ServiceRepository />
+
+      {/* Industry Sectors Showcase */}
+      <IndustrySectors />
+
+      {/* News, Notifications & Events */}
+      <NewsNotifications />
+
+      {/* Know Your Department (KYD) */}
+      <KYDSection />
+
+      {/* Media Center */}
+      <MediaSection />
+    </Layout>
   );
 };
 
